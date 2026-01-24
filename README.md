@@ -1,65 +1,75 @@
-# ♻️ Smart Neighborhood Recycling & Waste Segregation System
+# 🏘️ Smart Neighborhood Waste Segregation & Pickup Management System
 
-A full-stack **MERN application** designed to manage household waste pickup, segregation tracking, and reward-based recycling using **role-based authentication**.
+A full-stack **MERN application** designed to help **municipal corporations manage household waste pickup requests** efficiently while creating **community awareness** about **segregable (wet) and non-segregable (dry) waste**.
 
-This project was developed as an **individual placement project** with industry-level backend and frontend architecture.
+This project reduces **manual coordination and nuisance for corporation workers** by enabling households to request waste pickup digitally.
 
 ---
 
 ## 🎯 Project Objective
 
-The goal of this system is to:
-- Encourage proper waste segregation
-- Automate pickup scheduling
-- Track recycling performance
-- Provide dashboards for different user roles
+- Enable households to request waste pickup online
+- Help corporation workers manage pickups systematically
+- Promote awareness on waste segregation
+- Reduce street-level confusion and delays
+- Provide role-based dashboards for smooth operations
 
 ---
 
-## 🧑‍💻 User Roles
+## 🧑‍💼 User Roles
 
-### 1️⃣ Household User
+### 🏠 Household User
 - Register & login
 - Request waste pickup
 - View pickup history
 - View scheduled pickups
-- Earn reward points
+- Logout securely
 
-### 2️⃣ Collector
+### 🚚 Collector (Corporation Worker)
 - Login securely
-- View assigned pickups
+- View assigned pickup requests
 - Complete pickups
 - Update pickup status
 
-### 3️⃣ Admin
+### 🛠️ Admin (Municipality)
 - View all users
-- View all pickups
-- Monitor system analytics
-- View reports and statistics
+- View all pickup requests
+- Monitor pending & completed pickups
+- View system statistics
+- Access reports & analytics dashboard
 
 ---
 
-## 🧩 Features Implemented
+## 🧩 Features
 
 ### 🔐 Authentication
 - JWT-based authentication
 - Role-based authorization
-- Secure password hashing (bcrypt)
+- Secure password hashing using bcrypt
 
 ### 🏠 Household Dashboard
-- Create pickup request
-- View pickup history
-- View upcoming scheduled pickups
+- Pickup request form
+- Pickup history (pending & completed)
+- Scheduled pickup view
 
-### 🚚 Collector Dashboard
+### 🚛 Collector Dashboard
 - View pending pickups
-- Complete pickup requests
+- Mark pickup as completed
 
-### 🛠 Admin Dashboard
-- View total users
-- View total pickups
-- View pickup statistics
-- Analytics & reports section
+### 🛠️ Admin Dashboard
+- Total users count
+- Total pickups count
+- View all users
+- View all pickups with user details
+- Reports & analytics section
+
+---
+
+## 🏠 Home Page
+- Awareness-focused landing page
+- Importance of waste segregation
+- Clean navigation bar
+- Login & Signup options
 
 ---
 
@@ -69,8 +79,7 @@ The goal of this system is to:
 - React (Vite)
 - Tailwind CSS
 - Axios
-- React Router
-- Role-based routing
+- React Router DOM
 
 ### Backend
 - Node.js
@@ -81,3 +90,43 @@ The goal of this system is to:
 
 ---
 
+## 🗂️ Folder Structure
+
+smart-recycling-system/
+│
+├── backend/
+│ ├── config/
+│ ├── controllers/
+│ ├── middleware/
+│ ├── models/
+│ ├── routes/
+│ └── server.js
+│
+├── frontend/
+│ ├── src/
+│ │ ├── api/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── App.jsx
+│ │ └── main.jsx
+│
+└── README.md
+
+
+---
+
+## 🚀 Run the Project
+
+### Backend
+```bash
+cd backend
+npm install
+node server.js
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
