@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import HouseholdDashboard from "./pages/HouseholdDashboard";
@@ -11,10 +11,10 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* Redirect root to login */}
-        <Route path="/" element={<Navigate to="/login" />} />
+        {/* Home Page */}
+        <Route path="/" element={<Home />} />
 
-        {/* Auth */}
+        {/* Auth Pages */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 

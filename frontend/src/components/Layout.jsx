@@ -6,14 +6,17 @@ function Layout({ children }) {
   const logout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
-    navigate("/login");
+
+    navigate("/");   // ✅ CHANGE IS HERE (Home page)
   };
 
   return (
     <div className="min-h-screen bg-gray-100">
       {/* TOP NAVBAR */}
       <div className="bg-green-600 text-white px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">♻ Smart Recycling & Waste Segregation System</h1>
+        <h1 className="text-xl font-bold">
+          Smart Waste Segregation System
+        </h1>
 
         <button
           onClick={logout}

@@ -135,7 +135,6 @@ function HouseholdDashboard() {
                   <th className="border p-2">Waste</th>
                   <th className="border p-2">Date</th>
                   <th className="border p-2">Status</th>
-                  <th className="border p-2">Points</th>
                 </tr>
               </thead>
               <tbody>
@@ -149,9 +148,6 @@ function HouseholdDashboard() {
                     </td>
                     <td className="border p-2 capitalize">
                       {p.status}
-                    </td>
-                    <td className="border p-2">
-                      {p.points || 0}
                     </td>
                   </tr>
                 ))}

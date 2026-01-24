@@ -36,13 +36,14 @@ router.get("/users", async (req, res) => {
 router.get("/pickups", async (req, res) => {
   try {
     const pickups = await Pickup.find()
-      .populate("user", "name email")   // ✅ THIS FIXES "-"
+      .populate("user", "name email")   // 🔥 THIS LINE IS THE FIX
       .select("user wasteType status");
 
     res.json(pickups);
   } catch (err) {
-    res.status(500).json({ message: "Pickups fetch error" });
+    res.status(500).json({ message: "Pickup fetch error" });
   }
 });
+
 
 module.exports = router;

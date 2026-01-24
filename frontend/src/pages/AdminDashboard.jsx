@@ -74,17 +74,20 @@ function AdminDashboard() {
       )}
 
       {active === "pickups" && (
-        <Section title="All Pickups">
-          <Table
-            headers={["User", "Waste", "Status"]}
-            rows={pickups.map(p => [
-              p.household?.name || "-",
-              p.wasteType,
-              p.status
-            ])}
-          />
-        </Section>
-      )}
+  <Section title="All Pickups">
+    <Table
+      headers={["User", "Waste Type", "Status"]}
+      rows={pickups.map(p => {
+        return [
+          String(p.user && p.user.name ? p.user.name : "Unknown"),
+          String(p.wasteType),
+          String(p.status)
+        ];
+      })}
+    />
+  </Section>
+)}
+
 
       {active === "reports" && (
         <Section title="Reports & Analytics">
