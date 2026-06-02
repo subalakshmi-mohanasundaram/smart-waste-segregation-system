@@ -29,6 +29,13 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true
     },
+    city: {
+      type: String,
+    },
+
+    pincode: {
+      type: String,
+    },
 
     role: {
       type: String,
@@ -36,10 +43,7 @@ const userSchema = new mongoose.Schema(
       default: "household"
     },
 
-    points: {
-      type: Number,
-      default: 0
-    }
+
   },
   { timestamps: true }
 );
