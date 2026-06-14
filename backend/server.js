@@ -28,7 +28,7 @@ app.use("/api/pickups", pickupRoutes);
 
 
 app.get("/", (req, res) => {
-  res.send("Smart Recycling Backend is Running");
+  res.send("CI/CD Deployment Successful");
 });
 
 const PORT = process.env.PORT || 5000;
