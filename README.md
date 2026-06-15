@@ -1,132 +1,81 @@
-# 🏘️ Smart Neighborhood Waste Segregation & Pickup Management System
+# Smart Waste Segregation System - Cloud & DevOps Project
 
-A full-stack **MERN application** designed to help **municipal corporations manage household waste pickup requests** efficiently while creating **community awareness** about **segregable (wet) and non-segregable (dry) waste**.
+## Project Overview
 
-This project reduces **manual coordination and nuisance for corporation workers** by enabling households to request waste pickup digitally.
+A cloud-native Smart Waste Segregation and Pickup Management System developed using the MERN Stack and deployed using modern DevOps practices.
 
----
+## Technologies Used
 
-## 🎯 Project Objective
+### Application Layer
 
-- Enable households to request waste pickup online
-- Help corporation workers manage pickups systematically
-- Promote awareness on waste segregation
-- Reduce street-level confusion and delays
-- Provide role-based dashboards for smooth operations
+* React.js
+* Node.js
+* Express.js
+* MongoDB Atlas
 
----
+### Cloud Platform
 
-## 🧑‍💼 User Roles
+* AWS EC2
 
-### 🏠 Household User
-- Register & login
-- Request waste pickup
-- View pickup history
-- View scheduled pickups
-- Logout securely
+### DevOps Tools
 
-### 🚚 Collector (Corporation Worker)
-- Login securely
-- View assigned pickup requests
-- Complete pickups
-- Update pickup status
+* Git & GitHub
+* Jenkins
+* Docker
+* Kubernetes (Minikube)
 
-### 🛠️ Admin (Municipality)
-- View all users
-- View all pickup requests
-- Monitor pending & completed pickups
-- View system statistics
-- Access reports & analytics dashboard
+## DevOps Workflow
 
----
+Developer
+→ GitHub
+→ Jenkins CI/CD
+→ Docker Build
+→ Kubernetes Deployment
+→ AWS EC2
+→ End Users
 
-## 🧩 Features
+## Features
 
-### 🔐 Authentication
-- JWT-based authentication
-- Role-based authorization
-- Secure password hashing using bcrypt
+* User Registration & Login
+* Household Waste Pickup Requests
+* Collector Dashboard
+* Admin Dashboard
+* MongoDB Atlas Integration
 
-### 🏠 Household Dashboard
-- Pickup request form
-- Pickup history (pending & completed)
-- Scheduled pickup view
+## Deployment Architecture
 
-### 🚛 Collector Dashboard
-- View pending pickups
-- Mark pickup as completed
+GitHub → Jenkins → Docker → Kubernetes → AWS EC2
 
-### 🛠️ Admin Dashboard
-- Total users count
-- Total pickups count
-- View all users
-- View all pickups with user details
-- Reports & analytics section
+## DevOps Implementations
 
----
+### Jenkins
 
-## 🏠 Home Page
-- Awareness-focused landing page
-- Importance of waste segregation
-- Clean navigation bar
-- Login & Signup options
+Automated CI/CD pipeline for application deployment.
 
----
+### Docker
 
-## 🧪 Tech Stack
+Containerized backend services for consistent deployment.
 
-### Frontend
-- React (Vite)
-- Tailwind CSS
-- Axios
-- React Router DOM
+### Kubernetes
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
+Managed container deployment using Deployments and Services.
 
----
+### AWS EC2
 
-## 🗂️ Folder Structure
+Hosted application and DevOps infrastructure.
 
-smart-recycling-system/
-│
-├── backend/
-│ ├── config/
-│ ├── controllers/
-│ ├── middleware/
-│ ├── models/
-│ ├── routes/
-│ └── server.js
-│
-├── frontend/
-│ ├── src/
-│ │ ├── api/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│
-└── README.md
+## Kubernetes Files
 
+* deployment.yaml
+* service.yaml
 
----
+## Repository Structure
 
-## 🚀 Run the Project
+backend/
+frontend/
+deployment.yaml
+service.yaml
 
-### Backend
-```bash
-cd backend
-npm install
-node server.js
-```
+## Author
 
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
+Subalakshmi Mohanasundaram
