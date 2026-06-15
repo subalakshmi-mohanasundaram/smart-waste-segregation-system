@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smart-waste-backend
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: smart-waste-backend
+
+  template:
+    metadata:
+      labels:
+        app: smart-waste-backend
+
+    spec:
+      containers:
+      - name: smart-waste-backend
+        image: smart-waste-backend:latest
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 5000
+
+        env:
+        - name: PORT
+          value: "5000"
+
+        - name: JWT_SECRET
+          value: "mysupersecretkey"
+
+        - name: MONGO_URI
+          value: "mongodb+srv://admin:admin12345@cluster0.6kvyh2t.mongodb.net/?appName=Cluster0"
